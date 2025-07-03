@@ -37,3 +37,14 @@ def inss(salario):
     resultado = salario * aliquota -  deducao
     print("Será descontado R$", round(resultado, ndigits=2), "de inss")
 inss(0)
+def transporte(salario):
+     salario = float(input("Qual o salário bruto? : "))
+     tarifa = float(input("Qual valor da tarifa unitária? : "))
+     trajeto = int(input("Quantas passagens por dia? : "))
+     dias_uteis =int(input("Quantos dias úteis no mês? :"))
+     custo_total = trajeto * dias_uteis * tarifa
+     valor_desconto = salario * 0.06
+     custo_funcionario = custo_total - valor_desconto
+     print("O valor do transporte excedente pago é de R$: ", round(custo_funcionario, ndigits=2))
+     print("O valor do transporte pago pelo empregador(6%) é de R$: ", round(valor_desconto, ndigits=2))
+transporte(0)
