@@ -18,5 +18,5 @@ def irf(valores): # Imposto de Renda
         else:
             print('Valor inválido')
         resultado = valores * aliquota - deducao
-        print("O imposto de renda a ser pago é de R$", resultado)
+        print("O imposto de renda a ser pago é de R$", round(resultado, ndigits=2)
 irf(0)
